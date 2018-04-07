@@ -9,7 +9,6 @@ import me.noodles.gui.main.Main;
 
 
 public class ClickEvents implements Listener {
-
 	
     @EventHandler
     public void onClick(InventoryClickEvent e) {
