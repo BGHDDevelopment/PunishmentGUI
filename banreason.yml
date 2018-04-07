@@ -1,0 +1,51 @@
+#Reasons and times for all bans in the GUI
+#All times should be in litebans format - Example: 1w (1 week), 5y (5 years), 1h (1 hour), etc.
+#=======================================================  
+
+
+#Warning:
+WarnMessage: "&7Warned %player% Spam/Swearing/Hack Accusation/Trolling"
+WarnReason: "Spam/Swearing/Hack Accusation/Trolling"
+
+#PermMute:
+PermMuteMessage: "&7Muted %player% forever for Severe Advertising!"
+PermMuteReason: "Severe Advertising"
+
+#Severity1Mute:
+Severity1MuteMessage: "&7Muted %player% for 1h for Hackusations/Light Abuse/Harassment/Light Advertising/Light Spam!"
+Severity1MuteReason: "Hackusations/Light Abuse/Harassment/Light Advertising/Light Spam"
+Severity1MuteTime: "1h"
+
+#Severity2Mute:
+Severity2MuteMessage: "&7Muted %player% for 1w for Medium Spam/Medium Advertising/Medium Abuse/Harassment/Avoiding Chat Filter!"
+Severity2MuteReason: "Medium Spam/Medium Advertising/Medium Abuse/Harassment/Avoiding Chat Filter"
+Severity2MuteTime: "1w"
+
+#Severity3Mute:
+Severity3MuteMessage: "&7Muted %player% for 1m for Severe Spam/Severe Abuse/Harassment!"
+Severity3MuteReason: "Severe Spam/Severe Abuse/Harassment"
+Severity3MuteTime: "1m"
+
+#PermBan:
+PermBanMessage: "&7Banned %player% forever for Permanent Ban!"
+PermBanReason: "Permanent Ban"
+
+#Severity1GeneralBan:
+Severity1GeneralBanMessage: "&7Banned %player% for 1h for Team Killing/Trolling (Gameplay)/Map/Bug Exploiting!"
+Severity1GeneralBanReason: "Team Killing/Trolling (Gameplay)/Map/Bug Exploiting"
+Severity1GeneralBanTime: "1h"
+
+#Severity1ClientBan:
+Severity1ClientBanMessage: "&7Banned %player% for 1d for Player Radar/Damage Indicators!"
+Severity1ClientBanReason: "Player Radar/Damage Indicators"
+Severity1ClientBanTime: "1d"
+
+#Severity2ClientBan:
+Severity2ClientBanMessage: "&7Banned %player% for 1w for Forcefield/Speed Hack/Reach Hack/Other Hack - First Offense!"
+Severity2ClientBanReason: "Forcefield/Speed Hack/Reach Hack/Other Hack - First Offense"
+Severity2ClientBanTime: "1w"
+
+#Severity3ClientBan:
+Severity3ClientBanMessage: "&7Banned %player% for 1 month for Fly Hack/Forcefield/Speed Hack/Reach Hack/Other Hack - Also for second offenders!"
+Severity3ClientBanReason: "Fly Hack/Forcefield/Speed Hack/Reach Hack/Other Hack"
+Severity3ClientBanTime: "30d"

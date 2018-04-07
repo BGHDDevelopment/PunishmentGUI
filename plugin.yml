@@ -1,0 +1,7 @@
+main: me.noodles.gui.main.Main
+name: LiteBansGUI
+version: 0.5
+author: Noodles
+commands:
+   punish:
+      description: /punish (player)

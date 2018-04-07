@@ -1,0 +1,192 @@
+#In this file you can change all lore, names and items for the GUI.
+#Please use this list for the item names: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#Note: This list is for 1.12 the plugin is based in 1.8! Only use blocks that you are running on your server!
+#=======================================================  
+
+
+#Sections:
+
+#ClientModOffenses:
+ClientModOffensesItem: "IRON_SWORD"
+ClientModOffensesLocation: 14
+ClientModOffensesName: "&a&lClient Mod Offenses"
+ClientModOffensesLore: 
+  - '&7X-ray, Forcefield, Speed, Fly, Inventory Hacks, etc'
+
+#GeneralOffenses:
+GeneralOffensesItem: "HOPPER"
+GeneralOffensesLocation: 12
+GeneralOffensesName: "&a&lGeneral Offenses"
+GeneralOffensesLore:
+  - '&7Command/Map/Class/Skill exploits, etc'
+
+#ChatOffenses:
+ChatOffensesItem: "BOOK_AND_QUILL"
+ChatOffensesLocation: 10
+ChatOffensesName: "&a&lChat Offenses"
+ChatOffensesLore: 
+  - '&7Verbal Abuse, Spam, Harassment, Trolling, etc'
+
+
+
+#Other Punishments:
+
+#Warning:
+WarningItem: "ANVIL"
+WarningLocation: 43
+WarningName: "&a&lWarning"
+WarningLore:
+  - ' '
+  - '&7Example Warning Input:'
+  - '&fSpam - Repeatedly writing MEOW'
+  - '&fHack Accusation - Accused Tomp13 of hacking'
+  - '&fTrolling - was trying to make bob angry in chat '
+  - ' '
+
+#ChatPunishments:
+
+#PermMute:
+PermanentMuteItem: "PAPER"
+PermanentMuteLocation: 25
+PermanentMuteName: "&a&lPermanent Mute"
+PermanentMuteLore:
+  - '&fMute Duration: &ePermanent'
+  - ' '
+  - '&7Severe Advertising'
+  - '&fJOIN MINECADE! THIS SERVER IS TRASH'
+  - ' '
+  - '&7Other Severe Offense'
+  - '&fDDOS Threats/Death Threats ETC'
+  - ' '
+
+#Severity1Mute:
+Severity1MuteItem: "INK_SACK"
+Severity1MuteLocation: 19
+Severity1MuteName: "&a&lSeverity 1"
+Severity1MuteLore:
+  - '&fMute Duration: &e1 Hour'
+  - ' '
+  - '&7Light Spam'
+  - '&fSending the same message 2-5 times'
+  - ' '
+  - '&7Light Advertising'
+  - '&fanyone want to play on minecade?'
+  - ' ' 
+  - '&7Light Abuse/Harassment'
+  - '&fyou are so bad at this game'
+  - ' '
+  - '&7Hackusations'
+  - '&fyoure such a hacker!'
+  - ' '
+
+#Severity2Mute:
+Severity2MuteItem: "INK_SACK"
+Severity2MuteLocation: 28
+Severity2MuteName: "&a&lSeverity 2"
+Severity2MuteLore: 
+  - '&fMute Duration: &e1 Week'
+  - ' '
+  - '&7Medium Spam'
+  - '&fSending the same message 6-20 times'
+  - ' '
+  - '&7Medium Advertising'
+  - '&fjoin trash.server.net'
+  - ' ' 
+  - '&7Medium Abuse/Harassment'
+  - '&fyoure terrible, learn to play'
+  - '&ftrash off you stupid newb'
+  - ' '
+  - '&7Avoiding Chat Filter'
+  - '&f|_|<S YOU'
+  - ' '
+
+#Severity3Mute:
+Severity3MuteItem: "INK_SACK"
+Severity3MuteLocation: 37
+Severity3MuteName: "&a&lSeverity 3"
+Severity3MuteLore: 
+  - '&fMute Duration: &e1 Month'
+  - ' '
+  - '&7Severe Spam'
+  - '&fSending the same message 20+ times'
+  - '&fSpam Bot'
+  - ' '
+  - '&7Severe Abuse/Harassment'
+  - '&fGO DIE'
+  - ' '
+
+#ClientPunishments:
+
+#PermBan:
+PermanentBanItem: "REDSTONE_BLOCK"
+PermanentBanLocation: 34
+PermanentBanName: "&a&lPermanent Ban"
+PermanentBanLore:
+  - '&fBan Duration: &ePermanent'
+  - ' '
+  - '&7Severe Threats'
+  - '&fKILL THEM ALL WERE GOING TO HACK THE SERVER'
+  - ' '
+  
+#Severity1GeneralBan:
+Severity1GeneralBanItem: "INK_SACK"
+Severity1GeneralBanLocation: 21
+Severity1GeneralBanName: "&a&lSeverity 1"
+Severity1GeneralBanLore:
+  - '&fBan Duration: &e1 Hour'
+  - ' '
+  - '&7Team Killing'
+  - '&fIntentionally killing your team'
+  - ' '
+  - '&7Trolling (Gameplay)'
+  - '&fUsing abilities to trap players in spawn'
+  - ' ' 
+  - '&7Map/Bug Exploiting'
+  - '&fAbusing an exploit to gain an advantage'
+  - ' '
+
+#Severity1ClientBan:
+Severity1ClientBanItem: "INK_SACK"
+Severity1ClientBanLocation: 23
+Severity1ClientBanName: "&a&lSeverity 1"
+Severity1ClientBanLore:
+  - '&fBan Duration: &e1 Day'
+  - ' '
+  - '&7Examples'
+  - '&fDamage Indicators'
+  - '&fPlayer Radar'
+  - ' '
+
+#Severity2ClientBan:
+Severity2ClientBanItem: "INK_SACK"
+Severity2ClientBanLocation: 32
+Severity2ClientBanName: "&a&lSeverity 2"
+Severity2ClientBanLore:
+  - '&fBan Duration: &e1 Week'
+  - ' '
+  - '&7Examples'
+  - '&fForcefield'
+  - '&fSpeed Hack'
+  - '&fReach Hack'
+  - '&fOther Hack'
+  - '&cFirst Offense Only!'
+  - ' '
+
+#Severity3ClientBan:
+Severity3ClientBanItem: "INK_SACK"
+Severity3ClientBanLocation: 41
+Severity3ClientBanName: "&a&lSeverity 3"
+Severity3ClientBanLore:
+  - '&fBan Duration: &e1 Month'
+  - ' '
+  - '&7Examples'
+  - '&fForcefield'
+  - '&fSpeed Hack'
+  - '&fReach Hack'
+  - '&fFly Hack'
+  - '&fOther Hack'
+  - '&cAlso for second offenders!'
+  - ' '
+
+  
+  
