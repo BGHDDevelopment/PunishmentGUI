@@ -15,7 +15,11 @@ import me.noodles.gui.main.Main;
 public class Items {
 
     public static ItemStack Glass(Player p) {
-		return null;
+        ItemStack stone = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)7);
+        ItemMeta stonem = stone.getItemMeta();
+        stonem.setDisplayName(" ");
+        stone.setItemMeta(stonem);
+        return stone;
     }
 	
     
