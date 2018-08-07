@@ -3,7 +3,7 @@
 #Plugin Link: https://www.spigotmc.org/resources/52072/
 #=======================================================  
 
-#Permssion: litebansgui.update
+#Permssion: advancedbangui.update
 Update:
   Enabled: true
 #Enables if there is a message on-join when the plugin is outdated. 
