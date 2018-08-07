@@ -72,12 +72,12 @@ public class Main extends JavaPlugin
     
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
-        pm.registerEvents((Listener)new Punish(null), (Plugin)this);
-        pm.registerEvents((Listener)new ClickEvents(), (Plugin)this);
-        pm.registerEvents((Listener)new JoinExample(), (Plugin)this);
+        pm.registerEvents(new Punish(null), this);
+        pm.registerEvents(new ClickEvents(), this);
+        pm.registerEvents(new JoinExample(), this);
     }
     public void registerCommands() {
-    	this.getCommand("punish").setExecutor((CommandExecutor)new Punish(null));
+    	this.getCommand("punish").setExecutor(new Punish(null));
 
     }
     

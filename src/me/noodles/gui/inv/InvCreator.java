@@ -12,7 +12,7 @@ public class InvCreator {
 	    String SpigotHost;
 	    
 	    static {
-	        InvCreator.Main = Bukkit.createInventory((InventoryHolder)null, 54, InvNames.Main);
+	        InvCreator.Main = Bukkit.createInventory(null, 54, InvNames.Main);
 	    }
 	    
 }
