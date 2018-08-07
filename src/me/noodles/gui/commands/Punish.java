@@ -85,89 +85,76 @@ public void onClick(InventoryClickEvent e) {
     Player p = (Player)e.getWhoClicked();
     if (e.getCurrentItem() == null)
     	return;
-    if (e.getCurrentItem().equals((Object)Items.PermMute(p))) {
+    if (e.getCurrentItem().equals(Items.PermMute(p))) {
     if (p.hasPermission("punish.permmute")) {
-    	p.chat("/mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermMuteReason") + " " + "-s");
-    	//Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermMuteReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("PermMuteMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-    	
+    		p.chat("/mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermMuteReason") + " " + "-s");
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("PermMuteMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+   	 }
     }
-    }
-
-    if (e.getCurrentItem().equals((Object)Items.Severity1Mute(p))) {
+    if (e.getCurrentItem().equals(Items.Severity1Mute(p))) {
         if (p.hasPermission("punish.severity1mute")) {
             p.chat("/mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1MuteTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1MuteReason") + " " + "-s");
-			//Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1MuteTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1MuteReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1MuteMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1MuteMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Severity1GeneralBan(p))) {
+    if (e.getCurrentItem().equals(Items.Severity1GeneralBan(p))) {
         if (p.hasPermission("punish.severity1generalban")) {
         	p.chat("/ban" + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanReason") + " " + "-s");
-        	//Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ban " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Severity1ClientBan(p))) {
+    if (e.getCurrentItem().equals(Items.Severity1ClientBan(p))) {
         if (p.hasPermission("punish.severity1clientban")) {
-		p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1ClientBanReason") + " " + "-s");
-    	//Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ban " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1ClientBanReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1ClientBanMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+			p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1ClientBanReason") + " " + "-s");
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1ClientBanMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Severity2Mute(p))) {
+    if (e.getCurrentItem().equals(Items.Severity2Mute(p))) {
         if (p.hasPermission("punish.severity2mute")) {
             p.chat("/mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity2MuteTime") + " " + Main.plugin.getbanreason1Config().getString("Severity2MuteReason") + " " + "-s");
-          //  Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity2MuteTime") + " " + Main.plugin.getbanreason1Config().getString("Severity2MuteReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity2MuteMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity2MuteMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Severity3Mute(p))) {
+    if (e.getCurrentItem().equals(Items.Severity3Mute(p))) {
         if (p.hasPermission("punish.severity3mute")) {
            	p.chat("/mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity3MuteTime") + " " + Main.plugin.getbanreason1Config().getString("Severity3MuteReason") + " " + "-s");
-          //  Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mute " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity3MuteTime") + " " + Main.plugin.getbanreason1Config().getString("Severity3MuteReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity3MuteMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity3MuteMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Severity2ClientBan(p))) {
+    if (e.getCurrentItem().equals(Items.Severity2ClientBan(p))) {
         if (p.hasPermission("punish.severity2clientban")) {
-            	p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity2ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity2ClientBanReason") + " " + "-s");
-          //  Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ban " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity2ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity2ClientBanReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity2ClientBanMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+			p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity2ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity2ClientBanReason") + " " + "-s");
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity2ClientBanMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Severity3ClientBan(p))) {
+    if (e.getCurrentItem().equals(Items.Severity3ClientBan(p))) {
         if (p.hasPermission("punish.severity3clientban")) {
             p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity3ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity3ClientBanReason") + " " + "-s");
-    	//Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ban " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity3ClientBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity3ClientBanReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity3ClientBanMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity3ClientBanMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.PermBan(p))) {
+    if (e.getCurrentItem().equals(Items.PermBan(p))) {
         if (p.hasPermission("punish.permban")) {
-           p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermBanReason") + " " + "-s");
-    	//Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "ban " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermBanReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("PermBanMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-}
+       	    p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermBanReason") + " " + "-s");
+    		p.closeInventory();
+		}
     }
-    if (e.getCurrentItem().equals((Object)Items.Warning(p))) {
+    if (e.getCurrentItem().equals(Items.Warning(p))) {
         if (p.hasPermission("punish.warning")) {
-           p.chat("/warn" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("WarnReason") + " " + "-s");
-            //Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "warn " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("WarnReason") + " " + "-s");
-    	p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("WarnMessage").replace("%player%", bannedPlayer.getName())));
-    	p.closeInventory();
-        }
-}
-}
+           	p.chat("/warn" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("WarnReason") + " " + "-s");
+    		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("WarnMessage").replace("%player%", bannedPlayer.getName())));
+    		p.closeInventory();
+      	 	 }
+		}
+	}
 
 }
 

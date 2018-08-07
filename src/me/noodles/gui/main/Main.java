@@ -21,26 +21,7 @@ public class Main extends JavaPlugin
 {
 	private UpdateChecker checker;
     public static Main plugin;
-    private static Main instance;
-    
-    
-    private void setInstance(Main instance) {
-        this.instance = instance;
-    }
-    
-	
-    public static Main getInstance() {
-        return getInstance();
-    }
-    
-    public static Plugin getPlugin2() {
-        return Main.plugin;
-    }
-    
-    public static Main getPlugin() {
-        return (Main)JavaPlugin.getPlugin((Class)Main.class);
-    }
-    
+
     public void onEnable() {
     	PluginDescriptionFile VarUtilType = this.getDescription();
 		this.getLogger().info("LiteBansGUI V" + VarUtilType.getVersion() + " starting...");
@@ -124,11 +105,6 @@ public class Main extends JavaPlugin
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
-    }
-    
-    public void loadConfig() {
-        this.getConfig().options().copyDefaults(true);
-        this.saveConfig();
     }
     
 }
