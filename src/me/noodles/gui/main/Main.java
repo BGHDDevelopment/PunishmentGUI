@@ -43,33 +43,33 @@ public class Main extends JavaPlugin
     
     public void onEnable() {
     	PluginDescriptionFile VarUtilType = this.getDescription();
-		this.getLogger().info("AdvancedBanGUI V" + VarUtilType.getVersion() + " starting...");
-		this.getLogger().info("AdvancedBanGUI V" + VarUtilType.getVersion() + " loading commands and config files...");
+		this.getLogger().info("LiteBansGUI V" + VarUtilType.getVersion() + " starting...");
+		this.getLogger().info("LiteBansGUI V" + VarUtilType.getVersion() + " loading commands and config files...");
         this.createFiles();
         this.registerEvents();
         this.registerCommands();
         plugin = this;
         this.setEnabled(true);
-		getLogger().info("AdvancedBanGUI V" + VarUtilType.getVersion() + " started!");
-		this.getLogger().info("AdvancedBanGUI V" + VarUtilType.getVersion() + " checking for updates...");
+		getLogger().info("LiteBansGUI V" + VarUtilType.getVersion() + " started!");
+		this.getLogger().info("LiteBansGUI V" + VarUtilType.getVersion() + " checking for updates...");
         this.checker = new UpdateChecker(this);
 		if (this.checker.isConnected()) {
 			if (this.checker.hasUpdate()) {
 				getServer().getConsoleSender().sendMessage("------------------------");
-				getServer().getConsoleSender().sendMessage("AdvancedBanGUI is outdated!");
+				getServer().getConsoleSender().sendMessage("LiteBansGUI is outdated!");
 				getServer().getConsoleSender().sendMessage("Newest version: " + this.checker.getLatestVersion());
 				getServer().getConsoleSender().sendMessage("Your version: " + Main.plugin.getDescription().getVersion());
-				getServer().getConsoleSender().sendMessage("Please Update Here: https://www.spigotmc.org/resources/");
+				getServer().getConsoleSender().sendMessage("Please Update Here: https://www.spigotmc.org/resources/52072");
 				getServer().getConsoleSender().sendMessage("------------------------");
 			} else {
 				getServer().getConsoleSender().sendMessage("------------------------");
-				getServer().getConsoleSender().sendMessage("AdvancedBanGUI is up to date!");
+				getServer().getConsoleSender().sendMessage("LiteBansGUI is up to date!");
 				getServer().getConsoleSender().sendMessage("------------------------");
 			}
 		}
 	}
 
-	
+
     
     
     public void registerEvents() {
