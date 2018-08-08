@@ -7,9 +7,6 @@ import org.bukkit.inventory.InventoryHolder;
 public class InvCreator {
 
 	    public static Inventory Main;
-	    String DownloaderType;
-	    String GsonEntry;
-	    String SpigotHost;
 	    
 	    static {
 	        InvCreator.Main = Bukkit.createInventory(null, 54, InvNames.Main);

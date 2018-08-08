@@ -19,7 +19,7 @@ public class Punish implements Listener, CommandExecutor {
     public static Player bannedPlayer;
     
     
-    public Punish(final Main instance) {
+    public Punish() {
         this.bannedPlayer = null;  
     }
 
@@ -101,7 +101,7 @@ public void onClick(InventoryClickEvent e) {
     }
     if (e.getCurrentItem().equals(Items.Severity1GeneralBan(p))) {
         if (p.hasPermission("punish.severity1generalban")) {
-        	p.chat("/ban" + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanReason") + " " + "-s");
+        	p.chat("/ban " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanTime") + " " + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanReason") + " " + "-s");
     		p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("Severity1GeneralBanMessage").replace("%player%", bannedPlayer.getName())));
     		p.closeInventory();
 		}

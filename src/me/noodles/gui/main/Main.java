@@ -3,12 +3,9 @@ package me.noodles.gui.main;
 import java.io.File;
 import java.io.IOException;
 
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -55,12 +52,12 @@ public class Main extends JavaPlugin
     
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
-        pm.registerEvents(new Punish(null), this);
+        pm.registerEvents(new Punish(), this);
         pm.registerEvents(new ClickEvents(), this);
         pm.registerEvents(new JoinExample(), this);
     }
     public void registerCommands() {
-    	this.getCommand("punish").setExecutor(new Punish(null));
+    	this.getCommand("punish").setExecutor(new Punish());
 
     }
     

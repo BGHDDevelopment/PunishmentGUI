@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="AdvancedBanGUI:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AdvancedBanGUI_jar</output-path>
-    <root id="archive" name="AdvancedBanGUI.jar">
-      <element id="module-output" name="AdvancedBanGUI" />
+  <artifact type="jar" name="LiteBansGUIPublic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LiteBansGUIPublic_jar</output-path>
+    <root id="archive" name="LiteBansGUIPublic.jar">
+      <element id="module-output" name="LiteBansGUIPublic" />
       <element id="file-copy" path="$PROJECT_DIR$/banreason.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/guiitems.yml" />
