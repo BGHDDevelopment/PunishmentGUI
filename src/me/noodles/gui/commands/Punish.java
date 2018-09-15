@@ -66,7 +66,6 @@ public class Punish implements Listener, CommandExecutor {
 	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("Severity3MuteLocation"), Items.Severity3Mute(p));
 	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("Severity3ClientBanLocation"), Items.Severity3ClientBan(p));
 	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("WarningLocation"), Items.Warning(p));
-	            InvCreator.Main.setItem(53, Items.Dev(p));
 	            for (int i = 0; i < 54; ++i) {
 	                if (InvCreator.Main.getItem(i) == null) {
 	                    InvCreator.Main.setItem(i, Items.Glass(p));

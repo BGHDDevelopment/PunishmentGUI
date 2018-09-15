@@ -27,13 +27,6 @@ public class Items {
         return ChatColor.translateAlternateColorCodes('&', msg);
     }
     
-    public static ItemStack Dev(Player p) {
-        ItemStack stone = new ItemStack(Material.STICK);
-        ItemMeta stonem = stone.getItemMeta();
-        stonem.setDisplayName(ChatColor.GRAY + "Plugin made by Noodles(BGHDDevelopment)");
-        stone.setItemMeta(stonem);
-        return stone;
-    }
     
     public static ItemStack ClientModOffences(Player p) {
         ItemStack stone = new ItemStack(Material.getMaterial(Main.plugin.getguiitems1Config().getString("ClientModOffensesItem")));
