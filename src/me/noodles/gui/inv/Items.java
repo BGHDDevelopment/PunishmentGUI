@@ -26,7 +26,7 @@ public class Items {
     private static String getColor(String msg) {
         return ChatColor.translateAlternateColorCodes('&', msg);
     }
-    
+
     
     public static ItemStack ClientModOffences(Player p) {
         ItemStack stone = new ItemStack(Material.getMaterial(Main.plugin.getguiitems1Config().getString("ClientModOffensesItem")));
