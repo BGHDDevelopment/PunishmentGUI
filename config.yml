@@ -36,4 +36,6 @@ OfflinePlayer: "&cThat player is not online!"
 #punish.severity1mute
 #punish.severity2mute
 #punish.severity3mute
+#punish.ipban
+#punish.ipmute
 #=======================================================  

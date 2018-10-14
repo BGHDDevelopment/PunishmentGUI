@@ -87,6 +87,29 @@ public class Items {
         stone.setItemMeta(stonem);
         return stone;
     }
+
+    public static ItemStack IPBan(Player p) {
+        ItemStack stone = new ItemStack(Material.getMaterial(Main.plugin.getguiitems1Config().getString("IPBanItem")));
+        ItemMeta stonem = stone.getItemMeta();
+        stonem.setDisplayName(ChatColor.translateAlternateColorCodes('&', Main.plugin.getguiitems1Config().getString("IPBanName")));
+        ArrayList<String> lore = new ArrayList<>();
+        List<String> stringList = Main.plugin.getguiitems1Config().getStringList("IPBanLore");
+        IntStream.range(0, stringList.size()).forEach(i -> lore.add(getColor(stringList.get(i))));
+        stonem.setLore(lore);
+        stone.setItemMeta(stonem);
+        return stone;
+    }
+    public static ItemStack IPMute(Player p) {
+        ItemStack stone = new ItemStack(Material.getMaterial(Main.plugin.getguiitems1Config().getString("IPMuteItem")));
+        ItemMeta stonem = stone.getItemMeta();
+        stonem.setDisplayName(ChatColor.translateAlternateColorCodes('&', Main.plugin.getguiitems1Config().getString("IPMuteName")));
+        ArrayList<String> lore = new ArrayList<>();
+        List<String> stringList = Main.plugin.getguiitems1Config().getStringList("IPMuteLore");
+        IntStream.range(0, stringList.size()).forEach(i -> lore.add(getColor(stringList.get(i))));
+        stonem.setLore(lore);
+        stone.setItemMeta(stonem);
+        return stone;
+    }
     
     public static ItemStack Severity1Mute(Player p) {
         ItemStack stone = new ItemStack(Material.getMaterial(Main.plugin.getguiitems1Config().getString("Severity1MuteItem")));

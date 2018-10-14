@@ -188,5 +188,21 @@ Severity3ClientBanLore:
   - '&cAlso for second offenders!'
   - ' '
 
-  
+#IPMute:
+  IPMuteItem: "TNT"
+  IPMuteLocation: 7
+  IPMuteName: "&a&lIP Mute"
+  IPMuteLore:
+  - '&fMute Duration: &eIP MUTE'
+  - ' '
+  - ' '
+
+    #IPBan:
+    IPBanItem: "TNT"
+    IPBanLocation: 8
+    IPBanName: "&a&lIP BAN"
+    IPBanLore:
+    - '&fBan Duration: &eIP BAN'
+    - ' '
+    - ' '
   

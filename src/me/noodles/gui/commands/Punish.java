@@ -65,7 +65,9 @@ public class Punish implements Listener, CommandExecutor {
 	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("PermanentBanLocation"), Items.PermBan(p));
 	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("Severity3MuteLocation"), Items.Severity3Mute(p));
 	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("Severity3ClientBanLocation"), Items.Severity3ClientBan(p));
-	            InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("WarningLocation"), Items.Warning(p));
+				InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("IPBanLocation"), Items.IPBan(p));
+				InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("IPMuteLocation"), Items.IPMute(p));
+				InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("WarningLocation"), Items.Warning(p));
 	            for (int i = 0; i < 54; ++i) {
 	                if (InvCreator.Main.getItem(i) == null) {
 	                    InvCreator.Main.setItem(i, Items.Glass(p));
@@ -145,6 +147,18 @@ public void onClick(InventoryClickEvent e) {
        	    p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("PermBanReason") + " " + "-s");
     		p.closeInventory();
 		}
+    }
+    if (e.getCurrentItem().equals(Items.IPMute(p))) {
+        if (p.hasPermission("punish.ipmute")) {
+            p.chat("/ipmute" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("IPMuteReason") + " " + "-s");
+            p.closeInventory();
+        }
+    }
+    if (e.getCurrentItem().equals(Items.IPBan(p))) {
+        if (p.hasPermission("punish.ipban")) {
+            p.chat("/ban" + " " + bannedPlayer.getName() + " " + Main.plugin.getbanreason1Config().getString("IPBanReason") + " " + "-s");
+            p.closeInventory();
+        }
     }
     if (e.getCurrentItem().equals(Items.Warning(p))) {
         if (p.hasPermission("punish.warning")) {

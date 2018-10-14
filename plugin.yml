@@ -1,6 +1,6 @@
 main: me.noodles.gui.main.Main
 name: LiteBansGUI
-version: 0.13
+version: 0.14
 author: Noodles
 commands:
    punish:
