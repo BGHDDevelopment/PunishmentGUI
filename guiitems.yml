@@ -189,20 +189,19 @@ Severity3ClientBanLore:
   - ' '
 
 #IPMute:
-  IPMuteItem: "TNT"
-  IPMuteLocation: 7
-  IPMuteName: "&a&lIP Mute"
-  IPMuteLore:
-  - '&fMute Duration: &eIP MUTE'
-  - ' '
-  - ' '
-
+IPMuteItem: "TNT"
+IPMuteLocation: 7
+IPMuteName: "&a&lIP Mute"
+IPMuteLore:
+- '&fMute Duration: &eIP MUTE'
+- ' '
+- ' '
 #IPBan:
-  IPBanItem: "TNT"
-  IPBanLocation: 8
-  IPBanName: "&a&lIP BAN"
-  IPBanLore:
-  - '&fBan Duration: &eIP BAN'
-  - ' '
-  - ' '
+IPBanItem: "TNT"
+IPBanLocation: 8
+IPBanName: "&a&lIP BAN"
+IPBanLore:
+- '&fBan Duration: &eIP BAN'
+- ' '
+- ' '
   
