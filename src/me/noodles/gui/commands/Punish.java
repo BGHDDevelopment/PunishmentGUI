@@ -17,12 +17,9 @@ import me.noodles.gui.main.Main;
 public class Punish implements Listener, CommandExecutor {
 	
     public static Player bannedPlayer;
-    
-    
     public Punish() {
         this.bannedPlayer = null;  
     }
-
     
 		public boolean onCommand(final CommandSender sender, final Command cmd, final String commandLabel, final String[] args) {
 	    	if (!(sender instanceof Player)){
@@ -77,8 +74,6 @@ public class Punish implements Listener, CommandExecutor {
 			return true; 
 	    }
 
-		
-		
 @EventHandler
 public void onClick(InventoryClickEvent e) {
     if (e.getInventory().getName().equals(InvNames.Main)) {
