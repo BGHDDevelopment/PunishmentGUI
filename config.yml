@@ -3,27 +3,21 @@
 #Plugin Link: https://www.spigotmc.org/resources/52072/
 #Website: https://bghddevelopment.com
 
-#=======================================================  
-
+#=======================================================
 #Permssion: litebansgui.update
 Update:
   Enabled: true
-#Enables if there is a message on-join when the plugin is outdated. 
-
-#=======================================================  
-
+#Enables if there is a message on-join when the plugin is outdated.
+#=======================================================
 #Commands & Permissions:
 #/punish (playername) - punish.use
-
 #=======================================================
-
 #Main Command Messages:
 Prefix: "&8Punish &7>> "
 NoMessage: "&cInvalid! Use like /punish (player)!"
 NoPermission: "&c(!) You don't have permission to use this command!"
 NoPlayer: "Only players can use this command!"
 OfflinePlayer: "&cThat player is not online!"
-
 #=======================================================  
 #Permissions:
 #punish.permmute

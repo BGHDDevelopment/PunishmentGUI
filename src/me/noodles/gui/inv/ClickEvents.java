@@ -22,7 +22,6 @@ public class ClickEvents implements Listener {
         if (e.getCurrentItem() == null)
         	return;
       
-      
     }
 	
 }

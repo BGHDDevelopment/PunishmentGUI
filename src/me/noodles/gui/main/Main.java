@@ -48,9 +48,6 @@ public class Main extends JavaPlugin
 			}
 		}
 	}
-
-
-    
     
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
@@ -65,17 +62,13 @@ public class Main extends JavaPlugin
     
     private File configf, guiitems, banreason;
     private FileConfiguration config, guiitems1, banreason1;
-
-
     public FileConfiguration getguiitems1Config() {
         return this.guiitems1;
     }
-
     public FileConfiguration getbanreason1Config() {
         return this.banreason1;
     }
-    
-    
+
     private void createFiles() {
         configf = new File(getDataFolder(), "config.yml");
         guiitems = new File(getDataFolder(), "guiitems.yml");

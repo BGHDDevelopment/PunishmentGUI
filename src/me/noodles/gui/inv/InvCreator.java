@@ -11,5 +11,4 @@ public class InvCreator {
 	    static {
 	        InvCreator.Main = Bukkit.createInventory(null, 54, InvNames.Main);
 	    }
-	    
 }
