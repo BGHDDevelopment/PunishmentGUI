@@ -60,19 +60,23 @@ public class Main extends JavaPlugin
 
     }
     
-    private File configf, guiitems, banreason;
-    private FileConfiguration config, guiitems1, banreason1;
+    private File configf, guiitems, banreason, guicommands;
+    private FileConfiguration config, guiitems1, banreason1, guicommands1;
     public FileConfiguration getguiitems1Config() {
         return this.guiitems1;
     }
     public FileConfiguration getbanreason1Config() {
         return this.banreason1;
     }
+    public FileConfiguration getguicommands1Config() {
+        return this.guicommands1;
+    }
 
     private void createFiles() {
         configf = new File(getDataFolder(), "config.yml");
         guiitems = new File(getDataFolder(), "guiitems.yml");
         banreason = new File(getDataFolder(), "banreason.yml");
+        guicommands = new File(getDataFolder(), "guicommands.yml");
 
         if (!configf.exists()) {
             configf.getParentFile().mkdirs();
@@ -86,14 +90,20 @@ public class Main extends JavaPlugin
             banreason.getParentFile().mkdirs();
             saveResource("banreason.yml", false);
          }
-
+        if (!guicommands.exists()) {
+            guicommands.getParentFile().mkdirs();
+            saveResource("guicommands.yml", false);
+        }
         config = new YamlConfiguration();
         guiitems1 = new YamlConfiguration();
         banreason1 = new YamlConfiguration();
+        guicommands1 = new YamlConfiguration();
+
         try {
             config.load(configf);
             guiitems1.load(guiitems);
             banreason1.load(banreason);
+            guicommands1.load(guicommands);
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }

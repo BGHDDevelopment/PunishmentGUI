@@ -1,0 +1,42 @@
+#Welcome to the commands.yml file, feel free to change the commands around for each item. Reasons can be changed in the banreason.yml file.
+#For support please contact us on discord: https://bghddevelopment.com/discord
+#Placeholders:
+#%target% - Player you are punishing
+#%t% - Time
+#%reason% - Punish reason
+
+#Perm Mute
+PermMuteCommand: "/mute %target% %reason% -s"
+
+#IPMute
+IPMuteCommand: "/ipmute %target% %reason% -s"
+
+#Perm Ban
+PermBanCommand: "/ban %target% %reason% -s"
+
+#IPBan
+IPBanCommand: "/ipban %target% %reason% -s"
+
+#Serv 1 Mute
+Severity1MuteCommand: "/mute %target% %t% %reason% -s"
+
+#Serv 2 Mute
+Severity2MuteCommand: "/mute %target% %t% %reason% -s"
+
+#Serv 3 Mute
+Severity3MuteCommand: "/mute %target% %t% %reason% -s"
+
+#Serv 1 General Ban
+Severity1GeneralBanCommand: "/ban %target% %t% %reason% -s"
+
+#Serv 1 Client Ban
+Severity1ClientBanCommand: "/ban %target% %t% %reason% -s"
+
+#Serv 2 Client Ban
+Severity2ClientBanCommand: "/ban %target% %t% %reason% -s"
+
+#Serv 3 Client Ban
+Severity3ClientBanCommand: "/ban %target% %t% %reason% -s"
+
+#Warm
+WarnCommand: "/warn %target% %reason% -s"
