@@ -1,6 +1,6 @@
 main: me.noodles.gui.main.Main
 name: LiteBansGUI
-version: 1.3
+version: 1.4
 author: BGHDDevelopment
 website: https://bghddevelopment.com
 description: A GUI plugin that connects to LiteBans.

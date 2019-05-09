@@ -1,10 +1,6 @@
 package me.noodles.gui.commands;
 
-import me.noodles.gui.Logger;
 import me.noodles.gui.Settings;
-import me.noodles.gui.inv.InvCreator;
-import me.noodles.gui.inv.InvNames;
-import me.noodles.gui.inv.Items;
 import me.noodles.gui.main.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -12,9 +8,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class LiteBansGUICommand implements Listener, CommandExecutor {
 

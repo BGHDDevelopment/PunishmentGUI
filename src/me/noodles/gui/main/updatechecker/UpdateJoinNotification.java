@@ -8,7 +8,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.*;
 import org.bukkit.event.*;
 
-public class JoinExample implements Listener
+public class UpdateJoinNotification implements Listener
 {
 	
 	public UpdateChecker checker;

@@ -2,7 +2,6 @@ package me.noodles.gui.inv;
 
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.InventoryHolder;
 
 public class InvCreator {
 

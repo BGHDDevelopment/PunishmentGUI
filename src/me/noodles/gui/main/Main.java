@@ -2,7 +2,6 @@ package me.noodles.gui.main;
 
 import java.io.File;
 import java.io.IOException;
-
 import me.noodles.gui.Logger;
 import me.noodles.gui.MetricsLite;
 import me.noodles.gui.Settings;
@@ -15,7 +14,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
 import me.noodles.gui.inv.ClickEvents;
-import me.noodles.gui.main.updatechecker.JoinExample;
+import me.noodles.gui.main.updatechecker.UpdateJoinNotification;
 import me.noodles.gui.main.updatechecker.UpdateChecker;
 
 public class Main extends JavaPlugin
@@ -70,7 +69,7 @@ public class Main extends JavaPlugin
         final PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new Punish(), this);
         pm.registerEvents(new ClickEvents(), this);
-        pm.registerEvents(new JoinExample(), this);
+        pm.registerEvents(new UpdateJoinNotification(), this);
     }
     public void registerCommands() {
         this.getCommand("punish").setExecutor(new Punish());
