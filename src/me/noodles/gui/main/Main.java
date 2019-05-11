@@ -13,7 +13,6 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
-import me.noodles.gui.inv.ClickEvents;
 import me.noodles.gui.main.updatechecker.UpdateJoinNotification;
 import me.noodles.gui.main.updatechecker.UpdateChecker;
 
@@ -68,7 +67,6 @@ public class Main extends JavaPlugin
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new Punish(), this);
-        pm.registerEvents(new ClickEvents(), this);
         pm.registerEvents(new UpdateJoinNotification(), this);
     }
     public void registerCommands() {
