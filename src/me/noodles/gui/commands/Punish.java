@@ -88,6 +88,7 @@ public class Punish implements Listener, CommandExecutor {
 		} else {
 			e.setCancelled(false);
 		}
+		if (e.getView().getTitle().equals(InvNames.Main)) {
 			if (e.getCurrentItem().equals(Items.PermMute(p))) {
 				p.chat(Main.plugin.getguicommands1Config().getString("PermMuteCommand").replace("%reason%", Main.plugin.getbanreason1Config().getString("PermMuteReason")).replace("%target%", bannedPlayer.getName()));
 				p.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("Prefix") + Main.plugin.getbanreason1Config().getString("PermMuteMessage").replace("%player%", bannedPlayer.getName())));
@@ -153,6 +154,7 @@ public class Punish implements Listener, CommandExecutor {
 				p.closeInventory();
 			}
 		}
-
 	}
+
+}
 
