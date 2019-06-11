@@ -2,6 +2,7 @@ package me.noodles.gui.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,11 +14,10 @@ import me.noodles.gui.inv.InvCreator;
 import me.noodles.gui.inv.InvNames;
 import me.noodles.gui.inv.Items;
 import me.noodles.gui.main.Main;
-import org.bukkit.inventory.Inventory;
 
 public class Punish implements Listener, CommandExecutor {
 
-	public static Player bannedPlayer;
+	public static OfflinePlayer bannedPlayer;
 
 	public Punish() {
 		this.bannedPlayer = null;
@@ -28,7 +28,7 @@ public class Punish implements Listener, CommandExecutor {
 			Bukkit.getServer().getLogger().warning(Main.plugin.getConfig().getString("NoPlayer"));
 			return true;
 		}
-		final Player p = (Player) sender;
+		Player p = (Player) sender;
 		if (!cmd.getName().equalsIgnoreCase("punish")) {
 			return true;
 		}
@@ -37,7 +37,8 @@ public class Punish implements Listener, CommandExecutor {
 			return true;
 		}
 		if (args.length == 1) {
-			bannedPlayer = Bukkit.getPlayer(args[0]);
+			//bannedPlayer = Bukkit.getPlayer(args[0]);
+			bannedPlayer = Bukkit.getOfflinePlayer(args[0]);
 		}
 		if (!sender.hasPermission("punish.use")) {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("NoPermission")));
@@ -51,7 +52,6 @@ public class Punish implements Listener, CommandExecutor {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("OfflinePlayer")));
 			return true;
 		}
-
 		InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("ChatOffensesLocation"), Items.ChatOffences(p));
 		InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("GeneralOffensesLocation"), Items.GeneralOffences(p));
 		InvCreator.Main.setItem(Main.plugin.getguiitems1Config().getInt("ClientModOffensesLocation"), Items.ClientModOffences(p));

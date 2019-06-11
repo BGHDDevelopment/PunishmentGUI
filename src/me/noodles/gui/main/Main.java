@@ -47,7 +47,7 @@ public class Main extends JavaPlugin
         Logger.log(Logger.LogLevel.SUCCESS, "LiteBansGUI Version: " + Settings.VERSION + " Loaded.");
         this.setEnabled(true);
         Logger.log(Logger.LogLevel.OUTLINE,  "********************");
-        Logger.log(Logger.LogLevel.INFO, "Checking for updates...");        this.checker = new UpdateChecker(this);
+        Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
         this.checker = new UpdateChecker(this);
         if (this.checker.isConnected()) {
             if (this.checker.hasUpdate()) {
