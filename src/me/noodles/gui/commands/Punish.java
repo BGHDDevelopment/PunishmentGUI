@@ -2,6 +2,7 @@ package me.noodles.gui.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -81,6 +82,9 @@ public class Punish implements Listener, CommandExecutor {
 	public void onClick(InventoryClickEvent e) {
 		Player p = (Player) e.getWhoClicked();
 		if (e.getView().getTitle().equals(null)) {
+			return;
+		}
+		if (e.getCurrentItem() == null || (e.getCurrentItem().getType() == Material.AIR)) {
 			return;
 		}
 		if (e.getView().getTitle().equals(InvNames.Main)) {
