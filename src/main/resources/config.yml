@@ -16,7 +16,7 @@ Prefix: "&8Punish &7>> "
 NoMessage: "&cInvalid! Use like /punish (player)!"
 NoPermission: "&c(!) You don't have permission to use this command!"
 NoPlayer: "Only players can use this command!"
-OfflinePlayer: "&cThat player is not online!"
+NameLength: "&cThis name is too long! You can only enter 16 characters!"
 #=======================================================  
 #Permissions:
 #punish.permmute

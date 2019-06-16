@@ -1,9 +1,9 @@
-main: me.noodles.gui.main.Main
 name: LiteBansGUI
-version: 3.0
-author: BGHDDevelopment
-website: https://bghddevelopment.com
+version: ${project.version}
+main: me.noodles.gui.Main
+authors: [BGHDDevelopment]
 description: A GUI plugin that connects to LiteBans.
+website: https://bghddevelopment.com
 commands:
    punish:
       description: /punish (player).
