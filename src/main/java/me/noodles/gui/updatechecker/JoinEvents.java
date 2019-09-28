@@ -3,7 +3,7 @@ package me.noodles.gui.updatechecker;
 import me.noodles.gui.util.Settings;
 import org.bukkit.event.player.*;
 
-import me.noodles.gui.Main;
+import me.noodles.gui.PunishmentGUI;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.*;
@@ -16,15 +16,15 @@ public class JoinEvents implements Listener {
     @EventHandler
     public void onJoin(final PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if (p.hasPermission("litebansgui.update")) {
-            if (Main.plugin.getConfig().getBoolean("Update.Enabled") == true) {
-                this.checker = new UpdateChecker(Main.plugin);
+        if (PunishmentGUI.plugin.getConfig().getBoolean("Update.Enabled") == true) {
+        if (p.hasPermission("punishmentgui.update")) {
+                this.checker = new UpdateChecker(PunishmentGUI.plugin);
                 if (this.checker.isConnected()) {
                     if (this.checker.hasUpdate()) {
                         p.sendMessage(ChatColor.GRAY + "=========================");
-                        p.sendMessage(ChatColor.RED + "LiteBansGUI is outdated!");
+                        p.sendMessage(ChatColor.RED + "PunishmentGUI is outdated!");
                         p.sendMessage(ChatColor.GREEN + "Newest version: " + this.checker.getLatestVersion());
-                        p.sendMessage(ChatColor.RED + "Your version: " + Main.plugin.getDescription().getVersion());
+                        p.sendMessage(ChatColor.RED + "Your version: " + PunishmentGUI.plugin.getDescription().getVersion());
                         p.sendMessage(ChatColor.GRAY + "=========================");
                     }
                 }
@@ -36,7 +36,7 @@ public class JoinEvents implements Listener {
     @EventHandler
     public void onDevJoin(PlayerJoinEvent e) { //THIS EVENT IS USED FOR DEBUG REASONS ONLY!
         Player p = e.getPlayer();
-        this.checker = new UpdateChecker(Main.plugin);
+        this.checker = new UpdateChecker(PunishmentGUI.plugin);
         if (p.getName().equals("Noodles_YT")) {
             p.sendMessage(ChatColor.RED + "BGHDDevelopment Debug Message");
             p.sendMessage(" ");

@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>java.me.noodles.gui</groupId>
-    <artifactId>Main</artifactId>
-    <version>3.1</version>
+    <artifactId>PunishmentGUI</artifactId>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>LiteBansGUIPublic</name>
+    <name>PunishmentGUI</name>
 
-    <description>GUI plugin for LiteBans</description>
+    <description>GUI plugin for all punishment plugins.</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

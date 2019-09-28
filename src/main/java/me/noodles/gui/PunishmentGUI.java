@@ -3,29 +3,28 @@ package me.noodles.gui;
 import java.io.File;
 import java.io.IOException;
 
-import me.noodles.gui.commands.LiteBansGUICommand;
-import me.noodles.gui.commands.LiteBansGUIReloadCommand;
+import me.noodles.gui.commands.PunishmentGUICommand;
+import me.noodles.gui.commands.PunishmentGUIReloadCommand;
 import me.noodles.gui.util.Logger;
 import me.noodles.gui.util.MetricsLite;
 import me.noodles.gui.util.Settings;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
 import me.noodles.gui.updatechecker.JoinEvents;
 import me.noodles.gui.updatechecker.UpdateChecker;
 
-public class Main extends JavaPlugin
+public class PunishmentGUI extends JavaPlugin
 {
 	private UpdateChecker checker;
-    public static Main plugin;
+    public static PunishmentGUI plugin;
 
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-        Logger.log(Logger.LogLevel.INFO, "Initializing LiteBansGUI Version: " + Settings.VERSION);
+        Logger.log(Logger.LogLevel.INFO, "Initializing PunishmentGUI Version: " + Settings.VERSION);
         Logger.log(Logger.LogLevel.INFO, "Created by: " + Settings.DEVELOPER_NAME);
         Logger.log(Logger.LogLevel.INFO, "Website: " + Settings.DEVELOPER_URL);
         Logger.log(Logger.LogLevel.INFO, "Spigot Link: " + Settings.PLUGIN_URL);
@@ -45,7 +44,7 @@ public class Main extends JavaPlugin
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createFiles();
         Logger.log(Logger.LogLevel.INFO, "Config's Registered!");
-        Logger.log(Logger.LogLevel.SUCCESS, "LiteBansGUI Version: " + Settings.VERSION + " Loaded.");
+        Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI Version: " + Settings.VERSION + " Loaded.");
         this.setEnabled(true);
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
         Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
@@ -53,14 +52,14 @@ public class Main extends JavaPlugin
         if (this.checker.isConnected()) {
             if (this.checker.hasUpdate()) {
                 Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-                Logger.log(Logger.LogLevel.WARNING,("LiteBansGUI is outdated!"));
+                Logger.log(Logger.LogLevel.WARNING,("PunishmentGUI is outdated!"));
                 Logger.log(Logger.LogLevel.WARNING,("Newest version: " + this.checker.getLatestVersion()));
                 Logger.log(Logger.LogLevel.WARNING,("Your version: " + Settings.VERSION));
                 Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
                 Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
             }
             else {
-                Logger.log(Logger.LogLevel.SUCCESS, "LiteBansGUI is up to date!");
+                Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI is up to date!");
             }
 		}
 	}
@@ -72,8 +71,8 @@ public class Main extends JavaPlugin
     }
     public void registerCommands() {
         this.getCommand("punish").setExecutor(new Punish());
-        this.getCommand("litebansgui").setExecutor(new LiteBansGUICommand());
-        this.getCommand("litebansguireload").setExecutor(new LiteBansGUIReloadCommand());
+        this.getCommand("punishmentgui").setExecutor(new PunishmentGUICommand());
+        this.getCommand("punishmentguireload").setExecutor(new PunishmentGUIReloadCommand());
 
     }
     

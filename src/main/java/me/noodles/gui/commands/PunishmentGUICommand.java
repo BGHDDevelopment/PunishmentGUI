@@ -1,7 +1,7 @@
 package me.noodles.gui.commands;
 
 import me.noodles.gui.util.Settings;
-import me.noodles.gui.Main;
+import me.noodles.gui.PunishmentGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -10,16 +10,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-public class LiteBansGUICommand implements Listener, CommandExecutor {
+public class PunishmentGUICommand implements Listener, CommandExecutor {
 
 
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String commandLabel, final String[] args) {
 		if (!(sender instanceof Player)) {
-			Bukkit.getServer().getLogger().warning(Main.plugin.getConfig().getString("NoPlayer"));
+			Bukkit.getServer().getLogger().warning(PunishmentGUI.plugin.getConfig().getString("NoPlayer"));
 			return true;
 		}
 		final Player p = (Player) sender;
-		if (!cmd.getName().equalsIgnoreCase("litebansgui")) {
+		if (!cmd.getName().equalsIgnoreCase("punishmentgui")) {
 			return true;
 		}
 		p.sendMessage(ChatColor.GRAY +  "****************************************************");

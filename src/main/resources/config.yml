@@ -2,8 +2,9 @@
 #Discord/Support: https://bghddevelopment.com/discord
 #Plugin Link: https://www.spigotmc.org/resources/52072/
 #Website: https://bghddevelopment.com
+#Wiki: https://wiki.bghddevelopment.com/books/punishmentgui---litebansgui-advancedbangui
 #=======================================================
-#Permssion: litebansgui.update
+#Permssion: punishmentgui.update
 Update:
   Enabled: true
 #Enables if there is a message on-join when the plugin is outdated.
@@ -17,18 +18,4 @@ NoMessage: "&cInvalid! Use like /punish (player)!"
 NoPermission: "&c(!) You don't have permission to use this command!"
 NoPlayer: "Only players can use this command!"
 NameLength: "&cThis name is too long! You can only enter 16 characters!"
-#=======================================================  
-#Permissions:
-#punish.permmute
-#punish.permban
-#punish.warning
-#punish.severity1generalban
-#punish.severity1clientban
-#punish.severity2clientban
-#punish.severity3clientban
-#punish.severity1mute
-#punish.severity2mute
-#punish.severity3mute
-#punish.ipban
-#punish.ipmute
-#=======================================================  
+#=======================================================

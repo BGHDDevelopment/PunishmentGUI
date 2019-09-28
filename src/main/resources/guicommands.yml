@@ -1,9 +1,14 @@
 #Welcome to the commands.yml file, feel free to change the commands around for each item. Reasons can be changed in the banreason.yml file.
 #For support please contact us on discord: https://bghddevelopment.com/discord
+#=======================================================
 #Placeholders:
 #%target% - Player you are punishing
 #%t% - Time
 #%reason% - Punish reason
+#=======================================================
+
+#Default config is for LiteBans, feel free to change it to your punishment plugin!
+#AdvancedBanGUI template: https://wiki.bghddevelopment.com/books/punishmentgui---litebansgui-advancedbangui/page/advancedbangui-template
 
 #Perm Mute
 PermMuteCommand: "/mute %target% %reason% -s"

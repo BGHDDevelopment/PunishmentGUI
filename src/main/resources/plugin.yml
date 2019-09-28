@@ -1,13 +1,13 @@
-name: LiteBansGUI
+name: PunishmentGUI
 version: ${project.version}
-main: me.noodles.gui.Main
+main: me.noodles.gui.PunishmentGUI
 authors: [BGHDDevelopment]
-description: A GUI plugin that connects to LiteBans.
+description: A GUI plugin that connects to any punishment plugin.
 website: https://bghddevelopment.com
 commands:
    punish:
       description: /punish (player).
-   litebansgui:
-      description: Information about LiteBansGUI.
-   litebansguireload:
+   punishmentgui:
+      description: Information about PunishmentGUI.
+   punishmentguireload:
       description: Reloads config file.

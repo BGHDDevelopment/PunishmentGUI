@@ -2,16 +2,16 @@ package me.noodles.gui.updatechecker;
 
 import java.net.*;
 
-import me.noodles.gui.Main;
+import me.noodles.gui.PunishmentGUI;
 
 import java.io.*;
 
 public class UpdateChecker
 {
-    public Main plugin;
+    public PunishmentGUI plugin;
     public String version;
     
-    public UpdateChecker(Main plugin) {
+    public UpdateChecker(PunishmentGUI plugin) {
         this.plugin = plugin;
         this.version = this.getLatestVersion();
     }
