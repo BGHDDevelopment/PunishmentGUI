@@ -27,8 +27,10 @@ public class PunishmentGUI extends JavaPlugin
         Logger.log(Logger.LogLevel.INFO, "Initializing PunishmentGUI Version: " + Settings.VERSION);
         Logger.log(Logger.LogLevel.INFO, "Created by: " + Settings.DEVELOPER_NAME);
         Logger.log(Logger.LogLevel.INFO, "Website: " + Settings.DEVELOPER_URL);
-        Logger.log(Logger.LogLevel.INFO, "Spigot Link: " + Settings.PLUGIN_URL);
-        Logger.log(Logger.LogLevel.INFO, "Support Link: " + Settings.SUPPORT_DISCORD_URL);
+        Logger.log(Logger.LogLevel.INFO, "Spigot: " + Settings.PLUGIN_URL);
+        Logger.log(Logger.LogLevel.INFO, "Support: " + Settings.SUPPORT_DISCORD_URL);
+        Logger.log(Logger.LogLevel.INFO, "Suggestions/Feedback: " + Settings.FEEDBACK);
+        Logger.log(Logger.LogLevel.INFO, "Wiki: " + Settings.WIKI);
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
         Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");

@@ -21,11 +21,12 @@ public class JoinEvents implements Listener {
                 this.checker = new UpdateChecker(PunishmentGUI.plugin);
                 if (this.checker.isConnected()) {
                     if (this.checker.hasUpdate()) {
-                        p.sendMessage(ChatColor.GRAY + "=========================");
+                        p.sendMessage(ChatColor.GRAY + "****************************************************************");
                         p.sendMessage(ChatColor.RED + "PunishmentGUI is outdated!");
-                        p.sendMessage(ChatColor.GREEN + "Newest version: " + this.checker.getLatestVersion());
-                        p.sendMessage(ChatColor.RED + "Your version: " + PunishmentGUI.plugin.getDescription().getVersion());
-                        p.sendMessage(ChatColor.GRAY + "=========================");
+                        p.sendMessage(ChatColor.RED + "Newest version: " + ChatColor.GREEN + ChatColor.BOLD + this.checker.getLatestVersion());
+                        p.sendMessage(ChatColor.RED + "Your version: " + ChatColor.BOLD + Settings.VERSION);
+                        p.sendMessage(ChatColor.GOLD + "Please Update Here: " + ChatColor.ITALIC + Settings.PLUGIN_URL);
+                        p.sendMessage(ChatColor.GRAY + "****************************************************************");
                     }
                 }
             }

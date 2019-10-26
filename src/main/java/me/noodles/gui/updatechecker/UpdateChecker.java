@@ -3,6 +3,7 @@ package me.noodles.gui.updatechecker;
 import java.net.*;
 
 import me.noodles.gui.PunishmentGUI;
+import me.noodles.gui.util.Settings;
 
 import java.io.*;
 
@@ -42,6 +43,6 @@ public class UpdateChecker
     }
     
     public boolean hasUpdate() {
-        return !this.version.equals(this.plugin.getDescription().getVersion());
+        return !this.version.equals(Settings.VERSION);
     }
 }
