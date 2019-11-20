@@ -1,8 +1,6 @@
 #In this file you can change all lore, names and items for the GUI.
 #Please use this list for the item names: https://www.digminecraft.com/lists/item_id_list_pc_1_8.php
 #=======================================================
-
-
 #Sections:
 
 #ClientModOffenses:
@@ -25,7 +23,6 @@ ChatOffensesLocation: 10
 ChatOffensesName: "&a&lChat Offenses"
 ChatOffensesLore: 
   - '&7Verbal Abuse, Spam, Harassment, Trolling, etc'
-
 
 
 #Other Punishments:
