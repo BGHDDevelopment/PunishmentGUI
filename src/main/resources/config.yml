@@ -20,3 +20,4 @@ NoPermission: "&c(!) You don't have permission to use this command!"
 NoPlayer: "Only players can use this command!"
 NameLength: "&cThis name is too long! You can only enter 16 characters!"
 #=======================================================
+InventoryName: "&c&lPunishments"

@@ -1,5 +1,6 @@
 package me.noodles.gui.inv;
 
+import me.noodles.gui.PunishmentGUI;
 import org.bukkit.ChatColor;
 
 public class InvNames {
@@ -8,7 +9,7 @@ public class InvNames {
 
     
     static {
-        InvNames.Main = new StringBuilder().append(ChatColor.RED).append(ChatColor.BOLD).append("Punishments").toString();
+        InvNames.Main = ChatColor.translateAlternateColorCodes('&', PunishmentGUI.plugin.getConfig().getString("InventoryName"));
     }
 }
 	

@@ -8,6 +8,6 @@ public class Settings {
     public static String SUPPORT_DISCORD_URL = "https://bghddevelopment.com/discord";
     public static String FEEDBACK = "https://feedback.bghddevelopment.com";
     public static String WIKI = "https://wiki.bghddevelopment.com";
-    public static String VERSION = "0.0.2";
+    public static String VERSION = "0.0.4";
     public static String NAME = "PunishmentGUI";
 }

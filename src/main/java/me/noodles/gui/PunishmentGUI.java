@@ -95,7 +95,6 @@ public class PunishmentGUI extends JavaPlugin
         guiitems1 = YamlConfiguration.loadConfiguration(guiitems);
         banreason1 = YamlConfiguration.loadConfiguration(banreason);
         guicommands1 = YamlConfiguration.loadConfiguration(guicommands);
-
     }
 
     private void createFiles() {
