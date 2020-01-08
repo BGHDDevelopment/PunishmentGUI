@@ -22,7 +22,7 @@ public class JoinEvents implements Listener {
                 new UpdateChecker(plugin, 52072).getLatestVersion(version -> {
                     if (!PunishmentGUI.getInstance().getDescription().getVersion().equalsIgnoreCase(version)) {
                         p.sendMessage(ChatColor.GRAY + "****************************************************************");
-                        p.sendMessage(ChatColor.RED + "LuckPermsGUI is outdated!");
+                        p.sendMessage(ChatColor.RED + "PunishmentGUI is outdated!");
                         p.sendMessage(ChatColor.RED + "Newest version: " + version);
                         p.sendMessage(ChatColor.RED + "Your version: " + ChatColor.BOLD + Settings.VERSION);
                         p.sendMessage(ChatColor.GOLD + "Please Update Here: " + ChatColor.ITALIC + Settings.PLUGIN_URL);
