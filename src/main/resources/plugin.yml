@@ -1,5 +1,5 @@
 name: PunishmentGUI
-version: 0.0.4
+version: 0.0.5
 main: me.noodles.gui.PunishmentGUI
 authors: [BGHDDevelopment]
 description: A GUI plugin that connects to any punishment plugin.

@@ -11,6 +11,7 @@ import me.noodles.gui.util.Settings;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
@@ -21,6 +22,8 @@ public class PunishmentGUI extends JavaPlugin
 {
 	private UpdateChecker checker;
     public static PunishmentGUI plugin;
+    private static Plugin instance;
+
 
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
@@ -35,6 +38,7 @@ public class PunishmentGUI extends JavaPlugin
         Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
         plugin = this;
+        instance = this;
         MetricsLite metrics = new MetricsLite(this);
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
@@ -50,21 +54,18 @@ public class PunishmentGUI extends JavaPlugin
         this.setEnabled(true);
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
         Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
-        this.checker = new UpdateChecker(this);
-        if (this.checker.isConnected()) {
-            if (this.checker.hasUpdate()) {
+        new UpdateChecker(this, 52072).getLatestVersion(version -> {
+            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                Logger.log(Logger.LogLevel.SUCCESS,("PunishmentGUI is up to date!"));
+            } else {
                 Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
                 Logger.log(Logger.LogLevel.WARNING,("PunishmentGUI is outdated!"));
-                Logger.log(Logger.LogLevel.WARNING,("Newest version: " + this.checker.getLatestVersion()));
+                Logger.log(Logger.LogLevel.WARNING,("Newest version: " + version));
                 Logger.log(Logger.LogLevel.WARNING,("Your version: " + Settings.VERSION));
                 Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
-                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-            }
-            else {
-                Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI is up to date!");
-            }
-		}
-	}
+                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");			}
+        });
+    }
     
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
@@ -95,6 +96,10 @@ public class PunishmentGUI extends JavaPlugin
         guiitems1 = YamlConfiguration.loadConfiguration(guiitems);
         banreason1 = YamlConfiguration.loadConfiguration(banreason);
         guicommands1 = YamlConfiguration.loadConfiguration(guicommands);
+    }
+
+    public static Plugin getInstance() {
+        return instance;
     }
 
     private void createFiles() {
