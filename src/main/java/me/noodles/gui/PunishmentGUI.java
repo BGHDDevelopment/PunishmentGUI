@@ -98,6 +98,7 @@ public class PunishmentGUI extends JavaPlugin
         guicommands1 = YamlConfiguration.loadConfiguration(guicommands);
     }
 
+    public static PunishmentGUI getPlugin() { return plugin; }
     public static Plugin getInstance() {
         return instance;
     }
