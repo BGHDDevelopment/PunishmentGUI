@@ -3,6 +3,9 @@
 #=======================================================
 #Sections:
 
+#Filler:
+GUIFillerItem: "STAINED_GLASS_PANE:7"
+
 #ClientModOffenses:
 ClientModOffensesItem: "IRON_SWORD"
 ClientModOffensesLocation: 14
