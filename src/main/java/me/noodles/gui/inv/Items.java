@@ -16,7 +16,6 @@ public class Items {
     public static ItemStack Glass(Player p) {
         List<String> _item = Lists.newArrayList(PunishmentGUI.plugin.getguiitems1Config().getString("GUIFillerItem", "STAINED_GLASS_PANE:7").split(":"));
         if (_item.size() == 1) _item.add(String.valueOf(0));
-
         ItemStack itemStack = new ItemStack(Material.getMaterial(_item.get(0)), 1, Short.parseShort(_item.get(1)));
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setDisplayName(" ");
@@ -31,15 +30,11 @@ public class Items {
     private static ItemStack createItemFromConfig(String item, String name, List<String> lore) {
         List<String> _item = Lists.newArrayList(item.split(":"));
         if (_item.size() == 1) _item.add(String.valueOf(0));
-
         ItemStack _itemStack = new ItemStack(Material.getMaterial(_item.get(0)), 1, Short.parseShort(_item.get(1)));
-
         ItemMeta _itemMeta = _itemStack.getItemMeta();
         _itemMeta.setDisplayName(getColor(name));
-
         lore.replaceAll(Items::getColor);
         _itemMeta.setLore(lore);
-
         _itemStack.setItemMeta(_itemMeta);
         return _itemStack;
     }

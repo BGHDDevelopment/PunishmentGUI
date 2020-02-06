@@ -4,6 +4,7 @@
 #Sections:
 
 #Filler:
+FillerEnabled: true
 GUIFillerItem: "STAINED_GLASS_PANE:7"
 
 #ClientModOffenses:
