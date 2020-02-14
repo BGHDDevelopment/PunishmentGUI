@@ -113,9 +113,9 @@ public class Items {
     
     public static ItemStack Severity1GeneralBan(Player p) {
         return createItemFromConfig(
-            PunishmentGUI.plugin.getguiitems1Config().getString("Severity2ClientBanItem"),
-            PunishmentGUI.plugin.getguiitems1Config().getString("Severity2ClientBanName"),
-            PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity2ClientBanLore")
+            PunishmentGUI.plugin.getguiitems1Config().getString("Severity1GeneralBanItem"),
+            PunishmentGUI.plugin.getguiitems1Config().getString("Severity1GeneralBanName"),
+            PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity1GeneralBanLore")
         );
     }
     
