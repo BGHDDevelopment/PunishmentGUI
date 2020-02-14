@@ -15,12 +15,10 @@ import me.noodles.gui.commands.Punish;
 import me.noodles.gui.updatechecker.JoinEvents;
 import me.noodles.gui.updatechecker.UpdateChecker;
 
-public class PunishmentGUI extends JavaPlugin
-{
-	private UpdateChecker checker;
+public class PunishmentGUI extends JavaPlugin {
+	  private UpdateChecker checker;
     public static PunishmentGUI plugin;
     private static Plugin instance;
-
 
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
@@ -63,12 +61,13 @@ public class PunishmentGUI extends JavaPlugin
                 Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");			}
         });
     }
-    
+
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new Punish(), this);
         pm.registerEvents(new JoinEvents(), this);
     }
+
     public void registerCommands() {
         this.getCommand("punish").setExecutor(new Punish());
         this.getCommand("punishmentgui").setExecutor(new PunishmentGUICommand());
@@ -105,5 +104,5 @@ public class PunishmentGUI extends JavaPlugin
         banConfig = new CustomConfig(this, "banreason.yml");
         guiCommands = new CustomConfig(this, "guicommands.yml");
     }
-    
+
 }

@@ -23,7 +23,8 @@ public class JoinEvents implements Listener {
                         p.sendMessage(ChatColor.RED + "Newest version: " + version);
                         p.sendMessage(ChatColor.RED + "Your version: " + ChatColor.BOLD + Settings.VERSION);
                         p.sendMessage(ChatColor.GOLD + "Please Update Here: " + ChatColor.ITALIC + Settings.PLUGIN_URL);
-                        p.sendMessage(ChatColor.GRAY + "****************************************************************");                    }
+                        p.sendMessage(ChatColor.GRAY + "****************************************************************");
+                    }
                 });
             }
         }
@@ -41,4 +42,3 @@ public class JoinEvents implements Listener {
     }
 
 }
-    

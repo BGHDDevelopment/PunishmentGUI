@@ -39,7 +39,6 @@ public class Items {
         return _itemStack;
     }
 
-    
     public static ItemStack ClientModOffences(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("ClientModOffensesItem"),
@@ -47,7 +46,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("ClientModOffensesLore")
         );
     }
-    
+
     public static ItemStack GeneralOffences(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("GeneralOffensesItem"),
@@ -55,7 +54,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("GeneralOffensesLore")
         );
     }
-    
+
     public static ItemStack ChatOffences(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("ChatOffensesItem"),
@@ -63,8 +62,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("ChatOffensesLore")
         );
     }
-    
-    
+
     public static ItemStack PermMute(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("PermanentMuteItem"),
@@ -72,6 +70,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("PermanentMuteLore")
         );
     }
+
     public static ItemStack PermBan(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("PermanentBanItem"),
@@ -87,6 +86,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("IPBanLore")
         );
     }
+
     public static ItemStack IPMute(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("IPMuteItem"),
@@ -94,7 +94,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("IPMuteLore")
         );
     }
-    
+
     public static ItemStack Severity1Mute(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity1MuteItem"),
@@ -110,7 +110,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("WarningLore")
         );
     }
-    
+
     public static ItemStack Severity1GeneralBan(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity1GeneralBanItem"),
@@ -118,7 +118,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity1GeneralBanLore")
         );
     }
-    
+
     public static ItemStack Severity1ClientBan(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity1ClientBanItem"),
@@ -127,6 +127,7 @@ public class Items {
         );
 
     }
+
     public static ItemStack Severity2Mute(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity2MuteItem"),
@@ -134,6 +135,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity2MuteLore")
         );
     }
+
     public static ItemStack Severity2ClientBan(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity2ClientBanItem"),
@@ -141,6 +143,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity2ClientBanLore")
         );
     }
+
     public static ItemStack Severity3Mute(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity3MuteItem"),
@@ -148,6 +151,7 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity3MuteLore")
         );
     }
+
     public static ItemStack Severity3ClientBan(Player p) {
         return createItemFromConfig(
             PunishmentGUI.plugin.getguiitems1Config().getString("Severity3ClientBanItem"),
@@ -155,5 +159,5 @@ public class Items {
             PunishmentGUI.plugin.getguiitems1Config().getStringList("Severity3ClientBanLore")
         );
     }
-    
+
 }

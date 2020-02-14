@@ -12,16 +12,18 @@ import org.bukkit.event.Listener;
 
 public class PunishmentGUICommand implements Listener, CommandExecutor {
 
-
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String commandLabel, final String[] args) {
 		if (!(sender instanceof Player)) {
 			Bukkit.getServer().getLogger().warning(PunishmentGUI.plugin.getConfig().getString("NoPlayer"));
 			return true;
 		}
+
 		final Player p = (Player) sender;
+
 		if (!cmd.getName().equalsIgnoreCase("punishmentgui")) {
 			return true;
 		}
+
 		p.sendMessage(ChatColor.GRAY +  "****************************************************");
 		p.sendMessage(ChatColor.GOLD +  "Created by: " + ChatColor.WHITE + "" + Settings.DEVELOPER_NAME);
 		p.sendMessage(ChatColor.GOLD +  "Website: " + ChatColor.WHITE + "" + Settings.DEVELOPER_URL);
