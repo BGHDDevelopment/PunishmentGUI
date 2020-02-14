@@ -19,7 +19,7 @@ public class Punish implements Listener, CommandExecutor {
 	public static String bannedPlayer;
 
 	public Punish() {
-		this.bannedPlayer = null;
+		bannedPlayer = null;
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -90,7 +90,7 @@ public class Punish implements Listener, CommandExecutor {
 	public void onClick(InventoryClickEvent e) {
 		Player p = (Player) e.getWhoClicked();
 
-		if (e.getView().getTitle().equals(null)) {
+		if (!e.getView().getTitle().equals(InvNames.Main)) {
 			return;
 		}
 
