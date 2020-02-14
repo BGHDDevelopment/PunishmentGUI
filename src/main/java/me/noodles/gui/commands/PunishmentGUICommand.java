@@ -8,20 +8,21 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 
-public class PunishmentGUICommand implements Listener, CommandExecutor {
-
+public class PunishmentGUICommand implements CommandExecutor {
 
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String commandLabel, final String[] args) {
 		if (!(sender instanceof Player)) {
-			Bukkit.getServer().getLogger().warning(PunishmentGUI.plugin.getConfig().getString("NoPlayer"));
+			Bukkit.getServer().getLogger().warning(PunishmentGUI.getPlugin().getConfig().getString("NoPlayer"));
 			return true;
 		}
+
 		final Player p = (Player) sender;
+
 		if (!cmd.getName().equalsIgnoreCase("punishmentgui")) {
 			return true;
 		}
+
 		p.sendMessage(ChatColor.GRAY +  "****************************************************");
 		p.sendMessage(ChatColor.GOLD +  "Created by: " + ChatColor.WHITE + "" + Settings.DEVELOPER_NAME);
 		p.sendMessage(ChatColor.GOLD +  "Website: " + ChatColor.WHITE + "" + Settings.DEVELOPER_URL);

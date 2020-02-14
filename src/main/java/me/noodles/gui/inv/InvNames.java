@@ -4,12 +4,9 @@ import me.noodles.gui.PunishmentGUI;
 import org.bukkit.ChatColor;
 
 public class InvNames {
+    public static String Main;
 
-	public static String Main;
-
-    
     static {
-        InvNames.Main = ChatColor.translateAlternateColorCodes('&', PunishmentGUI.plugin.getConfig().getString("InventoryName"));
+        InvNames.Main = ChatColor.translateAlternateColorCodes('&', PunishmentGUI.getPlugin().getConfig().getString("InventoryName"));
     }
 }
-	

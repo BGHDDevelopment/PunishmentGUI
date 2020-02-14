@@ -28,4 +28,3 @@ public class Logger {
 
     public enum LogLevel { ERROR, WARNING, INFO, SUCCESS, OUTLINE }
 }
-

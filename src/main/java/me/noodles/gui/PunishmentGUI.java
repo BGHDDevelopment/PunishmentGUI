@@ -8,19 +8,16 @@ import me.noodles.gui.util.Logger;
 import me.noodles.gui.util.MetricsLite;
 import me.noodles.gui.util.Settings;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
 import me.noodles.gui.updatechecker.JoinEvents;
 import me.noodles.gui.updatechecker.UpdateChecker;
 
-public class PunishmentGUI extends JavaPlugin
-{
-	private UpdateChecker checker;
-    public static PunishmentGUI plugin;
-    private static Plugin instance;
+public class PunishmentGUI extends JavaPlugin {
+    private static PunishmentGUI plugin;
 
+    private IConfig customConfig, guiConfig, banConfig, guiCommands;
 
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
@@ -35,7 +32,6 @@ public class PunishmentGUI extends JavaPlugin
         Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
         plugin = this;
-        instance = this;
         MetricsLite metrics = new MetricsLite(this);
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
@@ -63,27 +59,26 @@ public class PunishmentGUI extends JavaPlugin
                 Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");			}
         });
     }
-    
+
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new Punish(), this);
         pm.registerEvents(new JoinEvents(), this);
     }
+
     public void registerCommands() {
         this.getCommand("punish").setExecutor(new Punish());
         this.getCommand("punishmentgui").setExecutor(new PunishmentGUICommand());
         this.getCommand("punishmentguireload").setExecutor(new PunishmentGUIReloadCommand());
     }
 
-    private IConfig customConfig, guiConfig, banConfig, guiCommands;
-
     @Override
     public FileConfiguration getConfig() { return this.customConfig.getConfig(); }
-    public FileConfiguration getguiitems1Config() { return this.guiConfig.getConfig(); }
-    public FileConfiguration getbanreason1Config() {
+    public FileConfiguration getGuiItems() { return this.guiConfig.getConfig(); }
+    public FileConfiguration getBanReason() {
         return this.banConfig.getConfig();
     }
-    public FileConfiguration getguicommands1Config() {
+    public FileConfiguration getGuiCommands() {
         return this.guiCommands.getConfig();
     }
 
@@ -95,9 +90,6 @@ public class PunishmentGUI extends JavaPlugin
     }
 
     public static PunishmentGUI getPlugin() { return plugin; }
-    public static Plugin getInstance() {
-        return instance;
-    }
 
     private void createFiles() {
         customConfig = new CustomConfig(this, "config.yml");
@@ -105,5 +97,5 @@ public class PunishmentGUI extends JavaPlugin
         banConfig = new CustomConfig(this, "banreason.yml");
         guiCommands = new CustomConfig(this, "guicommands.yml");
     }
-    
+
 }
