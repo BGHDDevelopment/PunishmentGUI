@@ -2,6 +2,8 @@ package me.noodles.gui;
 
 import me.noodles.gui.commands.PunishmentGUICommand;
 import me.noodles.gui.commands.PunishmentGUIReloadCommand;
+import me.noodles.gui.listeners.LeaveEvent;
+import me.noodles.gui.manager.BannedManager;
 import me.noodles.gui.util.config.CustomConfig;
 import me.noodles.gui.util.config.IConfig;
 import me.noodles.gui.util.Logger;
@@ -11,13 +13,14 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
-import me.noodles.gui.updatechecker.JoinEvents;
+import me.noodles.gui.listeners.JoinEvents;
 import me.noodles.gui.updatechecker.UpdateChecker;
 
 public class PunishmentGUI extends JavaPlugin {
     private static PunishmentGUI plugin;
 
     private IConfig customConfig, guiConfig, banConfig, guiCommands;
+    private BannedManager bannedPlayersManager = BannedManager.getManager();
 
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
@@ -60,10 +63,16 @@ public class PunishmentGUI extends JavaPlugin {
         });
     }
 
+    @Override
+    public void onDisable() {
+        getBannedManager().clear();
+    }
+
     public void registerEvents() {
         final PluginManager pm = this.getServer().getPluginManager();
         pm.registerEvents(new Punish(), this);
         pm.registerEvents(new JoinEvents(), this);
+        pm.registerEvents(new LeaveEvent(), this);
     }
 
     public void registerCommands() {
@@ -97,5 +106,7 @@ public class PunishmentGUI extends JavaPlugin {
         banConfig = new CustomConfig(this, "banreason.yml");
         guiCommands = new CustomConfig(this, "guicommands.yml");
     }
+
+    public BannedManager getBannedManager() { return this.bannedPlayersManager; }
 
 }
