@@ -50,9 +50,9 @@ Severity3ClientBanReason: "Fly Hack/Forcefield/Speed Hack/Reach Hack/Other Hack"
 Severity3ClientBanTime: "30d"
 
 #IPBAN:
-IPBanMessage: "&7Banned %player% for 1 month for Fly Hack/Forcefield/Speed Hack/Reach Hack/Other Hack - Also for second offenders!"
+IPBanMessage: "&7Banned %player% for Network IP Ban!"
 IPBanReason: "IPBAN - Network Ban"
 
 #IPMUTE:
-IPMuteMessage: "&7Muted %player% for 1 month for repeated chat offences - Also for second offenders!"
+IPMuteMessage: "&7Muted %player% for Network IP Mute!"
 IPMuteReason: "IPMUTE - Network Mute"

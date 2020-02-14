@@ -23,44 +23,71 @@ public class PunishmentGUI extends JavaPlugin {
     private BannedManager bannedPlayersManager = BannedManager.getManager();
 
     public void onEnable() {
-        Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-        Logger.log(Logger.LogLevel.INFO, "Initializing PunishmentGUI Version: " + Settings.VERSION);
-        Logger.log(Logger.LogLevel.INFO, "Created by: " + Settings.DEVELOPER_NAME);
-        Logger.log(Logger.LogLevel.INFO, "Website: " + Settings.DEVELOPER_URL);
-        Logger.log(Logger.LogLevel.INFO, "Spigot: " + Settings.PLUGIN_URL);
-        Logger.log(Logger.LogLevel.INFO, "Support: " + Settings.SUPPORT_DISCORD_URL);
-        Logger.log(Logger.LogLevel.INFO, "Suggestions/Feedback: " + Settings.FEEDBACK);
-        Logger.log(Logger.LogLevel.INFO, "Wiki: " + Settings.WIKI);
-        Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-        Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
-        Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
-        plugin = this;
-        MetricsLite metrics = new MetricsLite(this);
-        Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
-        Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
         this.createFiles();
-        Logger.log(Logger.LogLevel.INFO, "Config's Registered!");
-        Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
-        this.registerEvents();
-        Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
-        Logger.log(Logger.LogLevel.INFO, "Registering Commands...");
-        this.registerCommands();
-        Logger.log(Logger.LogLevel.INFO, "Commands Registered!");
-        Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI Version: " + Settings.VERSION + " Loaded.");
-        this.setEnabled(true);
-        Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-        Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
-        new UpdateChecker(this, 52072).getLatestVersion(version -> {
-            if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
-                Logger.log(Logger.LogLevel.SUCCESS,("PunishmentGUI is up to date!"));
-            } else {
-                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
-                Logger.log(Logger.LogLevel.WARNING,("PunishmentGUI is outdated!"));
-                Logger.log(Logger.LogLevel.WARNING,("Newest version: " + version));
-                Logger.log(Logger.LogLevel.WARNING,("Your version: " + Settings.VERSION));
-                Logger.log(Logger.LogLevel.WARNING,("Please Update Here: " + Settings.PLUGIN_URL));
-                Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");			}
-        });
+        if (getConfig().getBoolean("SilentStart.Enabled") == true) {
+            plugin = this;
+            MetricsLite metrics = new MetricsLite(this);
+            this.registerEvents();
+            this.registerCommands();
+            this.setEnabled(true);
+            Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI Version: " + Settings.VERSION + " Loaded.");
+            if (getConfig().getBoolean("CheckForUpdates.Enabled") == true) {
+                new UpdateChecker(this, 52072).getLatestVersion(version -> {
+                    if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                        Logger.log(Logger.LogLevel.SUCCESS, ("PunishmentGUI is up to date!"));
+                    } else {
+                        Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+                        Logger.log(Logger.LogLevel.WARNING, ("PunishmentGUI is outdated!"));
+                        Logger.log(Logger.LogLevel.WARNING, ("Newest version: " + version));
+                        Logger.log(Logger.LogLevel.WARNING, ("Your version: " + Settings.VERSION));
+                        Logger.log(Logger.LogLevel.WARNING, ("Please Update Here: " + Settings.PLUGIN_URL));
+                        Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+                    }
+                });
+            }
+        } else {
+            Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+            Logger.log(Logger.LogLevel.INFO, "Initializing PunishmentGUI Version: " + Settings.VERSION);
+            Logger.log(Logger.LogLevel.INFO, "Created by: " + Settings.DEVELOPER_NAME);
+            Logger.log(Logger.LogLevel.INFO, "Website: " + Settings.DEVELOPER_URL);
+            Logger.log(Logger.LogLevel.INFO, "Spigot: " + Settings.PLUGIN_URL);
+            Logger.log(Logger.LogLevel.INFO, "Support: " + Settings.SUPPORT_DISCORD_URL);
+            Logger.log(Logger.LogLevel.INFO, "Suggestions/Feedback: " + Settings.FEEDBACK);
+            Logger.log(Logger.LogLevel.INFO, "Wiki: " + Settings.WIKI);
+            Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+            Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
+            Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
+            plugin = this;
+            MetricsLite metrics = new MetricsLite(this);
+            Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
+            Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
+            this.createFiles();
+            Logger.log(Logger.LogLevel.INFO, "Config's Registered!");
+            Logger.log(Logger.LogLevel.INFO, "Registering Listeners...");
+            this.registerEvents();
+            Logger.log(Logger.LogLevel.INFO, "Listeners Registered!");
+            Logger.log(Logger.LogLevel.INFO, "Registering Commands...");
+            this.registerCommands();
+            Logger.log(Logger.LogLevel.INFO, "Commands Registered!");
+            Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI Version: " + Settings.VERSION + " Loaded.");
+            this.setEnabled(true);
+            Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+            if (getConfig().getBoolean("CheckForUpdates.Enabled") == true) {
+                Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
+                new UpdateChecker(this, 52072).getLatestVersion(version -> {
+                    if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                        Logger.log(Logger.LogLevel.SUCCESS, ("PunishmentGUI is up to date!"));
+                    } else {
+                        Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+                        Logger.log(Logger.LogLevel.WARNING, ("PunishmentGUI is outdated!"));
+                        Logger.log(Logger.LogLevel.WARNING, ("Newest version: " + version));
+                        Logger.log(Logger.LogLevel.WARNING, ("Your version: " + Settings.VERSION));
+                        Logger.log(Logger.LogLevel.WARNING, ("Please Update Here: " + Settings.PLUGIN_URL));
+                        Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
+                    }
+                });
+            }
+        }
     }
 
     @Override
