@@ -24,14 +24,14 @@ public class PunishmentGUI extends JavaPlugin {
 
     public void onEnable() {
         this.createFiles();
-        if (getConfig().getBoolean("SilentStart.Enabled") == true) {
+        if (getConfig().getBoolean("SilentStart.Enabled")) {
             plugin = this;
             MetricsLite metrics = new MetricsLite(this);
             this.registerEvents();
             this.registerCommands();
             this.setEnabled(true);
             Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI Version: " + Settings.VERSION + " Loaded.");
-            if (getConfig().getBoolean("CheckForUpdates.Enabled") == true) {
+            if (getConfig().getBoolean("CheckForUpdates.Enabled")) {
                 new UpdateChecker(this, 52072).getLatestVersion(version -> {
                     if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
                         Logger.log(Logger.LogLevel.SUCCESS, ("PunishmentGUI is up to date!"));
@@ -72,7 +72,7 @@ public class PunishmentGUI extends JavaPlugin {
             Logger.log(Logger.LogLevel.SUCCESS, "PunishmentGUI Version: " + Settings.VERSION + " Loaded.");
             this.setEnabled(true);
             Logger.log(Logger.LogLevel.OUTLINE, "*********************************************************************");
-            if (getConfig().getBoolean("CheckForUpdates.Enabled") == true) {
+            if (getConfig().getBoolean("CheckForUpdates.Enabled")) {
                 Logger.log(Logger.LogLevel.INFO, "Checking for updates...");
                 new UpdateChecker(this, 52072).getLatestVersion(version -> {
                     if (this.getDescription().getVersion().equalsIgnoreCase(version)) {
