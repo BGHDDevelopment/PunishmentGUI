@@ -1,5 +1,6 @@
-package me.noodles.gui.updatechecker;
+package me.noodles.gui.listeners;
 
+import me.noodles.gui.updatechecker.UpdateChecker;
 import me.noodles.gui.util.Settings;
 import org.bukkit.event.player.*;
 
