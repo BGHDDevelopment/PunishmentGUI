@@ -17,6 +17,8 @@ import me.noodles.gui.updatechecker.UpdateChecker;
 public class PunishmentGUI extends JavaPlugin {
     private static PunishmentGUI plugin;
 
+    private IConfig customConfig, guiConfig, banConfig, guiCommands;
+
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
         Logger.log(Logger.LogLevel.INFO, "Initializing PunishmentGUI Version: " + Settings.VERSION);
@@ -70,15 +72,13 @@ public class PunishmentGUI extends JavaPlugin {
         this.getCommand("punishmentguireload").setExecutor(new PunishmentGUIReloadCommand());
     }
 
-    private IConfig customConfig, guiConfig, banConfig, guiCommands;
-
     @Override
     public FileConfiguration getConfig() { return this.customConfig.getConfig(); }
-    public FileConfiguration getguiitems1Config() { return this.guiConfig.getConfig(); }
-    public FileConfiguration getbanreason1Config() {
+    public FileConfiguration getGuiItems() { return this.guiConfig.getConfig(); }
+    public FileConfiguration getBanReason() {
         return this.banConfig.getConfig();
     }
-    public FileConfiguration getguicommands1Config() {
+    public FileConfiguration getGuiCommands() {
         return this.guiCommands.getConfig();
     }
 
