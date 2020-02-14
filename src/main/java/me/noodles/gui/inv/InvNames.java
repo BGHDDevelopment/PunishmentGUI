@@ -7,6 +7,6 @@ public class InvNames {
     public static String Main;
 
     static {
-        InvNames.Main = ChatColor.translateAlternateColorCodes('&', PunishmentGUI.plugin.getConfig().getString("InventoryName"));
+        InvNames.Main = ChatColor.translateAlternateColorCodes('&', PunishmentGUI.getPlugin().getConfig().getString("InventoryName"));
     }
 }

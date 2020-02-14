@@ -8,7 +8,6 @@ import me.noodles.gui.util.Logger;
 import me.noodles.gui.util.MetricsLite;
 import me.noodles.gui.util.Settings;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.noodles.gui.commands.Punish;
@@ -16,9 +15,7 @@ import me.noodles.gui.updatechecker.JoinEvents;
 import me.noodles.gui.updatechecker.UpdateChecker;
 
 public class PunishmentGUI extends JavaPlugin {
-	  private UpdateChecker checker;
-    public static PunishmentGUI plugin;
-    private static Plugin instance;
+    private static PunishmentGUI plugin;
 
     public void onEnable() {
         Logger.log(Logger.LogLevel.OUTLINE,  "*********************************************************************");
@@ -33,7 +30,6 @@ public class PunishmentGUI extends JavaPlugin {
         Logger.log(Logger.LogLevel.INFO, "Plugin Loading...");
         Logger.log(Logger.LogLevel.INFO, "Registering Managers...");
         plugin = this;
-        instance = this;
         MetricsLite metrics = new MetricsLite(this);
         Logger.log(Logger.LogLevel.INFO, "Managers Registered!");
         Logger.log(Logger.LogLevel.INFO, "Loading Config's...");
@@ -94,9 +90,6 @@ public class PunishmentGUI extends JavaPlugin {
     }
 
     public static PunishmentGUI getPlugin() { return plugin; }
-    public static Plugin getInstance() {
-        return instance;
-    }
 
     private void createFiles() {
         customConfig = new CustomConfig(this, "config.yml");

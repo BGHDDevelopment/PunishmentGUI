@@ -13,7 +13,7 @@ public class PunishmentGUIReloadCommand implements Listener, CommandExecutor {
 
     public boolean onCommand(final CommandSender sender, final Command cmd, final String commandLabel, final String[] args) {
         if (!(sender instanceof Player)) {
-            Bukkit.getServer().getLogger().warning(PunishmentGUI.plugin.getConfig().getString("NoPlayer"));
+            Bukkit.getServer().getLogger().warning(PunishmentGUI.getPlugin().getConfig().getString("NoPlayer"));
             return true;
         }
 
@@ -24,11 +24,11 @@ public class PunishmentGUIReloadCommand implements Listener, CommandExecutor {
         }
 
         if (!sender.hasPermission("punish.reload")) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', PunishmentGUI.plugin.getConfig().getString("NoPermission")));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', PunishmentGUI.getPlugin().getConfig().getString("NoPermission")));
             return true;
         }
 
-        PunishmentGUI.plugin.reloadFiles();
+        PunishmentGUI.getPlugin().reloadFiles();
         p.sendMessage(ChatColor.GREEN + "Config reloaded. Changes should be live in game.");
         return true;
     }

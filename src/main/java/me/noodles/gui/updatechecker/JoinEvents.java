@@ -14,10 +14,10 @@ public class JoinEvents implements Listener {
     @EventHandler
     public void onJoin(final PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if (PunishmentGUI.plugin.getConfig().getBoolean("Update.Enabled") == true) {
+        if (PunishmentGUI.getPlugin().getConfig().getBoolean("Update.Enabled") == true) {
             if (p.hasPermission("punishmentgui.update")) {
                 new UpdateChecker(PunishmentGUI.getPlugin(), 52072).getLatestVersion(version -> {
-                    if (!PunishmentGUI.getInstance().getDescription().getVersion().equalsIgnoreCase(version)) {
+                    if (!PunishmentGUI.getPlugin().getDescription().getVersion().equalsIgnoreCase(version)) {
                         p.sendMessage(ChatColor.GRAY + "****************************************************************");
                         p.sendMessage(ChatColor.RED + "PunishmentGUI is outdated!");
                         p.sendMessage(ChatColor.RED + "Newest version: " + version);

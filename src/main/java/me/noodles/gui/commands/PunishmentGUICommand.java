@@ -14,7 +14,7 @@ public class PunishmentGUICommand implements Listener, CommandExecutor {
 
 	public boolean onCommand(final CommandSender sender, final Command cmd, final String commandLabel, final String[] args) {
 		if (!(sender instanceof Player)) {
-			Bukkit.getServer().getLogger().warning(PunishmentGUI.plugin.getConfig().getString("NoPlayer"));
+			Bukkit.getServer().getLogger().warning(PunishmentGUI.getPlugin().getConfig().getString("NoPlayer"));
 			return true;
 		}
 
