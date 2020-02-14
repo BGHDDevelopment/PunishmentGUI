@@ -13,9 +13,7 @@ public class BannedManager {
         players.put(uuid, player);
     }
 
-    public String get(final UUID uuid) {
-        return Optional.ofNullable(players.get(uuid)).orElseThrow(NoSuchElementException::new);
-    }
+    public String get(final UUID uuid) { return players.get(uuid); }
 
     public void remove(final UUID uuid) {
         players.remove(uuid);
